@@ -34,7 +34,15 @@ public class SistemaEntregadores {
 			case 1:
 				//Cadastrar os 20 entregadores da plataforma, pela funcao.
 				//Dentro do loop que solicita a digitação dos dados de cada entregador, chamar a funcao abaixo
+				for (int i=0; i<nomesEntregadores.length; i++) {
+				System.out.println("Digite o nome do Entregador!");
+				String novoNome = leitor.next();
+				System.out.println("Informe o telefone: ");
+				String novoTelefone = leitor.next();
+				System.out.println("Qual foi a sua avaliação? ");
+				double novaAvaliacao = leitor.nextDouble();	
 				FuncoesEntregadores.cadastrarEntregador(nomesEntregadores, telefonesEntregadores, avaliacoesEntregadores, novoNome, novoTelefone, novaAvaliacao);
+				}
 				break;
 				
 			case 2:

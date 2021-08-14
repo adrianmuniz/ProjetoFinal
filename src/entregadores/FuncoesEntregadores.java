@@ -16,4 +16,13 @@ public class FuncoesEntregadores {
 		System.out.println("3 - Exibir nome e telefone do entregador");
 		System.out.println("4 - Sair do programa");
 	}
+	
+	public static void cadastrarEntregador (String[] nomesEntregadores,String[] telefonesEntregadores, double[] avaliacoesEntregadores,String novoNome,String novoTelefone,double novaAvaliacao) {
+		for (int i=0; i<nomesEntregadores.length; i++) {
+		nomesEntregadores[i] = novoNome;
+		telefonesEntregadores[i] = novoTelefone;
+		avaliacoesEntregadores[i] = novaAvaliacao; 
+		}
+	}
+	
 }
