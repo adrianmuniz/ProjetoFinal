@@ -1,5 +1,7 @@
 package entregadores;
 
+import java.util.Scanner;
+
 public class FuncoesEntregadores {
 
 	public static boolean login (String usuario, String senha) {
@@ -25,4 +27,19 @@ public class FuncoesEntregadores {
 		}
 	}
 	
+	public static void alterarAvaliacao(String[] nomesEntregadores,double[] avaliacoesEntregadores, double novaAvaliacao) {
+		Scanner leitor = new Scanner (System.in);
+		System.out.println("Informe o nome do entregador que deseja alterar a avaliação:");
+		String nomeEntregador = leitor.next();
+		for (int i=0; i<nomesEntregadores.length; i++) {
+			if (nomesEntregadores[i].equals(nomeEntregador)) {
+					avaliacoesEntregadores[i] = novaAvaliacao;
+			} else {
+				System.out.println("Entregador não encontrado! Tente novamente.");
+			}
+		}
+	}
 }
+
+
+

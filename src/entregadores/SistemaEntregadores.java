@@ -3,7 +3,7 @@ package entregadores;
 import java.util.Scanner;
 
 public class SistemaEntregadores {
-
+	public static final int QUANTIDADE_ENTREGADORES = 20;
 	public static void main(String[] args) {
 		Scanner leitor = new Scanner(System.in);
 		String[] nomesEntregadores = new String[QUANTIDADE_ENTREGADORES];
@@ -32,8 +32,6 @@ public class SistemaEntregadores {
 			
 			switch(opcao) {
 			case 1:
-				//Cadastrar os 20 entregadores da plataforma, pela funcao.
-				//Dentro do loop que solicita a digitação dos dados de cada entregador, chamar a funcao abaixo
 				for (int i=0; i<nomesEntregadores.length; i++) {
 				System.out.println("Digite o nome do Entregador!");
 				String novoNome = leitor.next();
@@ -47,9 +45,10 @@ public class SistemaEntregadores {
 				
 			case 2:
 				//Alterar a avaliação de um entregador pelo nome
+				System.out.println("Informa a nova avaliação: ");
+				double novaAvaliacao = leitor.nextDouble();
 				FuncoesEntregadores.alterarAvaliacao(nomesEntregadores, avaliacoesEntregadores, novaAvaliacao);
 				break;
-				
 			case 3:
 				//Exibir o nome e telefone do entregador mais bem avaliado
 				FuncoesEntregadores.melhorAvaliado(nomesEntregadores, telefonesEntregadores, avaliacoesEntregadores);
