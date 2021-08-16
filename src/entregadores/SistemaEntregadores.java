@@ -51,16 +51,14 @@ public class SistemaEntregadores {
 				FuncoesEntregadores.melhorAvaliado(nomesEntregadores, telefonesEntregadores, avaliacoesEntregadores);
 				break;
 			case 4:
-				//Mensagem de saída
+				System.out.println("Encerrando o sistema!");
 				break;	
 			default:
-				//Mensagem de opção inválida
+				System.out.println("Ops! A opção não existe, tente novamente.");
 				break;
 				
 			}
-			
 		}
-
 	}
 
 }
