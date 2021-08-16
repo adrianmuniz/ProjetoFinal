@@ -20,10 +20,14 @@ public class FuncoesEntregadores {
 	}
 	
 	public static void cadastrarEntregador (String[] nomesEntregadores,String[] telefonesEntregadores, double[] avaliacoesEntregadores,String novoNome,String novoTelefone,double novaAvaliacao) {
-		for (int i=0; i<nomesEntregadores.length; i++) {
-		nomesEntregadores[i] = novoNome;
-		telefonesEntregadores[i] = novoTelefone;
-		avaliacoesEntregadores[i] = novaAvaliacao; 
+		int i =0;
+		while(nomesEntregadores[i] != null && i<nomesEntregadores.length) {
+			i++;
+		}
+		if (i<nomesEntregadores.length) {
+			nomesEntregadores[i] = novoNome;
+			telefonesEntregadores[i] = novoTelefone;
+			avaliacoesEntregadores[i] = novaAvaliacao;
 		}
 	}
 	
