@@ -36,13 +36,11 @@ public class FuncoesEntregadores {
 		System.out.println("Informe o nome do entregador que deseja alterar a avaliação:");
 		String nomeEntregador = leitor.next();
 		for (int i=0; i<nomesEntregadores.length; i++) {
-			if (nomesEntregadores[i].equals(nomeEntregador)) {
-					avaliacoesEntregadores[i] = novaAvaliacao;
-					System.out.println("Avaliação alterada!");
-			} else {
-				System.out.println("Entregador não encontrado! Tente novamente.");
+			if (nomesEntregadores[i].equalsIgnoreCase(nomeEntregador)) {
+				avaliacoesEntregadores[i] = novaAvaliacao;
+				System.out.println("Alterção realizada!");
 			}
-		}
+		}	
 	}
 	
 	public static void melhorAvaliado (String[] nomesEntregadores, String[]telefonesEntregadores, double[] avaliacoesEntregadores) {
@@ -54,7 +52,7 @@ public class FuncoesEntregadores {
 		}
 		for (int i=0; i<nomesEntregadores.length; i++) {
 			if (melhorAvaliacao == avaliacoesEntregadores[i]) {
-				System.out.println("O entregador melhor avaliado é o " + nomesEntregadores[i] + " e seu telefone: " + telefonesEntregadores[i]);
+				System.out.println("O entregador melhor avaliado é o " + nomesEntregadores[i] + " com a avaliação de " + avaliacoesEntregadores[i] +" e seu telefone: " + telefonesEntregadores[i]);
 			}
 		}
 	}

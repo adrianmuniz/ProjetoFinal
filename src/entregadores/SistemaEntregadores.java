@@ -32,7 +32,7 @@ public class SistemaEntregadores {
 			switch(opcao) {
 			case 1:
 				for (int i=0; i<nomesEntregadores.length; i++) {
-				System.out.println("Digite o nome do Entregador!");
+				System.out.println("Digite o nome do " + (i+1) + "º Entregador!");
 				String novoNome = leitor.next();
 				System.out.println("Informe o telefone: ");
 				String novoTelefone = leitor.next();
@@ -43,12 +43,11 @@ public class SistemaEntregadores {
 				break;
 				
 			case 2:
-				System.out.println("Informa a nova avaliação: ");
+				System.out.println("Informe a nova avaliação: ");
 				double novaAvaliacao = leitor.nextDouble();
 				FuncoesEntregadores.alterarAvaliacao(nomesEntregadores, avaliacoesEntregadores, novaAvaliacao);
 				break;
 			case 3:
-				//Exibir o nome e telefone do entregador mais bem avaliado
 				FuncoesEntregadores.melhorAvaliado(nomesEntregadores, telefonesEntregadores, avaliacoesEntregadores);
 				break;
 			case 4:
