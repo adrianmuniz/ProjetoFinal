@@ -25,7 +25,6 @@ public class SistemaEntregadores {
 		}
 		
 		
-		
 		while(opcao!=4) {
 			FuncoesEntregadores.exibirMenu();
 			opcao = leitor.nextInt();
@@ -44,7 +43,6 @@ public class SistemaEntregadores {
 				break;
 				
 			case 2:
-				//Alterar a avaliação de um entregador pelo nome
 				System.out.println("Informa a nova avaliação: ");
 				double novaAvaliacao = leitor.nextDouble();
 				FuncoesEntregadores.alterarAvaliacao(nomesEntregadores, avaliacoesEntregadores, novaAvaliacao);

@@ -34,8 +34,23 @@ public class FuncoesEntregadores {
 		for (int i=0; i<nomesEntregadores.length; i++) {
 			if (nomesEntregadores[i].equals(nomeEntregador)) {
 					avaliacoesEntregadores[i] = novaAvaliacao;
+					System.out.println("Avaliação alterada!");
 			} else {
 				System.out.println("Entregador não encontrado! Tente novamente.");
+			}
+		}
+	}
+	
+	public static void melhorAvaliado (String[] nomesEntregadores, String[]telefonesEntregadores, double[] avaliacoesEntregadores) {
+		double melhorAvaliacao =0;
+		for (int i=0; i<avaliacoesEntregadores.length; i++) {
+			if (avaliacoesEntregadores[i] > melhorAvaliacao) {
+				melhorAvaliacao = avaliacoesEntregadores[i];
+			}
+		}
+		for (int i=0; i<nomesEntregadores.length; i++) {
+			if (melhorAvaliacao == avaliacoesEntregadores[i]) {
+				System.out.println("O entregador melhor avaliado é o " + nomesEntregadores[i] + "e seu telefone: " + telefonesEntregadores[i]);
 			}
 		}
 	}
