@@ -15,7 +15,7 @@ public class FuncoesEntregadores {
 		System.out.println("ESCOLHA UMA DAS OPÇÕES A BAIXO!");
 		System.out.println("1 - Cadastrar entregador");
 		System.out.println("2 - Alterar avaliação");
-		System.out.println("3 - Exibir nome e telefone do entregador");
+		System.out.println("3 - Melhor avaliado");
 		System.out.println("4 - Sair do programa");
 	}
 	
@@ -54,7 +54,7 @@ public class FuncoesEntregadores {
 		}
 		for (int i=0; i<nomesEntregadores.length; i++) {
 			if (melhorAvaliacao == avaliacoesEntregadores[i]) {
-				System.out.println("O entregador melhor avaliado é o " + nomesEntregadores[i] + "e seu telefone: " + telefonesEntregadores[i]);
+				System.out.println("O entregador melhor avaliado é o " + nomesEntregadores[i] + " e seu telefone: " + telefonesEntregadores[i]);
 			}
 		}
 	}

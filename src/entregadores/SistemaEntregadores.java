@@ -11,10 +11,10 @@ public class SistemaEntregadores {
 		double[] avaliacoesEntregadores = new double[QUANTIDADE_ENTREGADORES];
 		int opcao = 0;
 		String usuario, senha;
-		System.out.println("Para entrar no sistema você deve informar seu usuário e sua senha");
-		System.out.println("Digite seu usuário");
+		System.out.println("Bem vindo ao Ssitema de Entregadores!!");
+		System.out.println("Usuário: ");
 		usuario = leitor.next();
-		System.out.println("Digite sua senha");
+		System.out.println("Senha: ");
 		senha = leitor.next();
 
 		if(FuncoesEntregadores.login(usuario, senha)){
