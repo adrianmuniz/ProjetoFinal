@@ -17,5 +17,14 @@ public class FuncoesAgendamento {
 		System.out.println("4 - Sair do programa");
 	}
 	
+	public static void inserirHorario (String[] agendamentos, String horarioDigitado) {
+		int i=0;
+		while (agendamentos[i] != null && i<agendamentos.length) {
+			i++;
+		}
+		if (i<agendamentos.length) {
+			agendamentos[i] = horarioDigitado;
+		}
+	}
 
 }

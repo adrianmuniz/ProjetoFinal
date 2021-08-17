@@ -3,6 +3,7 @@ package agendamento;
 import java.util.Scanner;
 
 public class SistemaAgendamento {
+	public static final int QUANTIDADE_AGENDAMENTOS = 2;
 	public static void main(String[] args) {
 		Scanner leitor = new Scanner(System.in);
 		String[] agendamentos = new String[QUANTIDADE_AGENDAMENTOS];
@@ -22,7 +23,6 @@ public class SistemaAgendamento {
 		}
 		
 		
-		
 		while(opcao!=4) {
 			FuncoesAgendamento.exibirMenu();
 			opcao = leitor.nextInt();
@@ -32,7 +32,11 @@ public class SistemaAgendamento {
 				//Digitar todos os 10 horários de agendamento disponíveis para o dia
 				
 				//Dentro do loop que solicita a digitação de cada horário, chamar a seguinte função para cada horário digitado
+				for (int i=0; i<agendamentos.length; i++) {
+				System.out.println("Digite o " + (i+1) + "° horário disponivel:");
+				String horarioDigitado;
 				FuncoesAgendamento.inserirHorario(agendamentos, horarioDigitado);
+				}
 				break;
 				
 			case 2:
@@ -58,9 +62,6 @@ public class SistemaAgendamento {
 				break;
 				
 			}
-			
 		}
-
 	}
-
 }
