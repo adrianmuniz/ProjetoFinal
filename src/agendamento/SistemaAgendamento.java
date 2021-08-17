@@ -3,16 +3,16 @@ package agendamento;
 import java.util.Scanner;
 
 public class SistemaAgendamento {
-	public static final int QUANTIDADE_AGENDAMENTOS = 2;
+	public static final int QUANTIDADE_AGENDAMENTOS = 10;
 	public static void main(String[] args) {
 		Scanner leitor = new Scanner(System.in);
 		String[] agendamentos = new String[QUANTIDADE_AGENDAMENTOS];
 		int opcao = 0;
 		String usuario, senha;
 		System.out.println("Para entrar no sistema você deve informar seu usuário e sua senha");
-		System.out.println("Digite seu usuário");
+		System.out.println("Usuário:");
 		usuario = leitor.next();
-		System.out.println("Digite sua senha");
+		System.out.println("Senha: ");
 		senha = leitor.next();
 
 		if(FuncoesAgendamento.login(usuario, senha)){
@@ -29,9 +29,6 @@ public class SistemaAgendamento {
 			
 			switch(opcao) {
 			case 1:
-				//Digitar todos os 10 horários de agendamento disponíveis para o dia
-				
-				//Dentro do loop que solicita a digitação de cada horário, chamar a seguinte função para cada horário digitado
 				for (int i=0; i<agendamentos.length; i++) {
 				System.out.println("Digite o " + (i+1) + "° horário disponivel:");
 				String horarioDigitado = leitor.next();
@@ -40,9 +37,6 @@ public class SistemaAgendamento {
 				break;
 				
 			case 2:
-				//Digitar um horário de agendamento desejado. Se estiver disponível, solicitar o nome do cliente e substituir no vetor o horário original por horário + nome do cliente
-				//Fazer a verificação com a seguinte funcao
-				
 				System.out.println("Informe o horário que deseja agendar:");
 				String horarioDesejado = leitor.next();
 				if (FuncoesAgendamento.verificarDisponibilidade(agendamentos, horarioDesejado)) {
@@ -51,7 +45,6 @@ public class SistemaAgendamento {
 					FuncoesAgendamento.agendar(agendamentos,horarioDesejado, nomeCliente);
 				}
 				break;
-				
 			case 3:
 				FuncoesAgendamento.exibirAgenda(agendamentos);
 				break;

@@ -3,7 +3,7 @@ package entregadores;
 import java.util.Scanner;
 
 public class SistemaEntregadores {
-	public static final int QUANTIDADE_ENTREGADORES = 2;
+	public static final int QUANTIDADE_ENTREGADORES = 20;
 	public static void main(String[] args) {
 		Scanner leitor = new Scanner(System.in);
 		String[] nomesEntregadores = new String[QUANTIDADE_ENTREGADORES];

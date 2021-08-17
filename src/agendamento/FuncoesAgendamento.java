@@ -39,7 +39,7 @@ public class FuncoesAgendamento {
 	public static void agendar (String[] agendamentos, String horarioDesejado, String nomeCliente) {
 		for (int i=0; i<agendamentos.length; i++) {
 			if (horarioDesejado.equals(agendamentos[i])) {
-				agendamentos[i] = horarioDesejado + nomeCliente;
+				agendamentos[i] = horarioDesejado + " - " + nomeCliente;
 				System.out.println("Horario agendado as " + horarioDesejado + " para " + nomeCliente);
 			}
 		}
