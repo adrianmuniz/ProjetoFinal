@@ -34,7 +34,7 @@ public class SistemaAgendamento {
 				//Dentro do loop que solicita a digitação de cada horário, chamar a seguinte função para cada horário digitado
 				for (int i=0; i<agendamentos.length; i++) {
 				System.out.println("Digite o " + (i+1) + "° horário disponivel:");
-				String horarioDigitado;
+				String horarioDigitado = leitor.next();
 				FuncoesAgendamento.inserirHorario(agendamentos, horarioDigitado);
 				}
 				break;
@@ -42,11 +42,14 @@ public class SistemaAgendamento {
 			case 2:
 				//Digitar um horário de agendamento desejado. Se estiver disponível, solicitar o nome do cliente e substituir no vetor o horário original por horário + nome do cliente
 				//Fazer a verificação com a seguinte funcao
-				//FuncoesAgendamento.verificaDisponibilidade(agendamentos, horarioDesejado)
 				
-				//Fazer a substituição com a seguinte função
-				FuncoesAgendamento.agendar(agendamentos, horarioDesejado, nomeCliente);
-				
+				System.out.println("Informe o horário que deseja agendar:");
+				String horarioDesejado = leitor.next();
+				if (FuncoesAgendamento.verificarDisponibilidade(agendamentos, horarioDesejado)) {
+					System.out.println("Nome:");
+					String nomeCliente = leitor.next();
+					FuncoesAgendamento.agendar(agendamentos,horarioDesejado, nomeCliente);
+				}
 				break;
 				
 			case 3:
