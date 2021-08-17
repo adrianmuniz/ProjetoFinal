@@ -3,7 +3,6 @@ package agendamento;
 import java.util.Scanner;
 
 public class SistemaAgendamento {
-
 	public static void main(String[] args) {
 		Scanner leitor = new Scanner(System.in);
 		String[] agendamentos = new String[QUANTIDADE_AGENDAMENTOS];

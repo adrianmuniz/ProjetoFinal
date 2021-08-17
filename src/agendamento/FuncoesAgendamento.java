@@ -2,6 +2,13 @@ package agendamento;
 
 public class FuncoesAgendamento {
 
-	//Aqui devem ser criadas as funções utilizadas no arquivo SistemaAgendamento
+	public static boolean login (String usuario, String senha) {
+		if(usuario.equalsIgnoreCase("Admin") && senha.equalsIgnoreCase("123")) {
+			return true;
+		}
+		return false;
+	}
+	
+	
 
 }
