@@ -45,4 +45,9 @@ public class FuncoesAgendamento {
 		}
 	}
 	
+	public static void exibirAgenda(String[] agendamentos) {
+		for (int i=0; i<agendamentos.length; i++) {
+			System.out.println(agendamentos[i]);
+		}
+	}
 }

@@ -53,15 +53,14 @@ public class SistemaAgendamento {
 				break;
 				
 			case 3:
-				//Exibir a agenda completa
 				FuncoesAgendamento.exibirAgenda(agendamentos);
 				break;
 			
 			case 4:
-				//Mensagem de saída
+				System.out.println("Sistema encerrado");
 				break;
 			default:
-				//Mensagem de opção inválida
+				System.out.println("Ops! Opção inválida, tente novamente.");
 				break;
 				
 			}
